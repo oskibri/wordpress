@@ -21,7 +21,7 @@
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-if ($_SERVER['HTTP_HOST'] == "wordpr-25046.rasktest1.r99.no") {
+if ($_SERVER['HOSTNAME'] == "rasktest1.r99.no" || $_SERVER['HTTP_HOST'] == "wordpr-25046.rasktest1.r99.no" || $_SERVER['HTTP_HOST'] == "multi-rask.snus.party") {
 	define( 'DB_NAME', 'wordpress0be0' );
 	define( 'DB_USER', 'wordpress0be0' );
 	define( 'DB_PASSWORD', 'W1FC<y81)@+Rf:$' );
@@ -97,12 +97,16 @@ define( 'WP_DEBUG_LOG', true );
 define( 'WP_DEBUG_DISPLAY', true );
 
 
-if ($_SERVER['HTTP_HOST'] == "wordpr-25046.rasktest1.r99.no") {
+if ($_SERVER['HOSTNAME'] == "rasktest1.r99.no" || $_SERVER['HTTP_HOST'] == "wordpr-25046.rasktest1.r99.no" || $_SERVER['HTTP_HOST'] == "multi-rask.snus.party") {
 	define( 'WP_ALLOW_MULTISITE', true );
 	define( 'MULTISITE', true );
 	define( 'SUBDOMAIN_INSTALL', false );
 	$base = '/';
-	define( 'DOMAIN_CURRENT_SITE', 'wordpr-25046.rasktest1.r99.no');
+	if ($_SERVER['HTTP_HOST'] == "wordpr-25046.rasktest1.r99.no") {
+		define( 'DOMAIN_CURRENT_SITE', 'wordpr-25046.rasktest1.r99.no');
+	} else {
+		define( 'DOMAIN_CURRENT_SITE', 'multi-rask.snus.party');
+	}
 	define( 'PATH_CURRENT_SITE', '/' );
 	define( 'SITE_ID_CURRENT_SITE', 1 );
 	define( 'BLOG_ID_CURRENT_SITE', 1 );
@@ -111,7 +115,11 @@ if ($_SERVER['HTTP_HOST'] == "wordpr-25046.rasktest1.r99.no") {
 	define( 'MULTISITE', true );
 	define( 'SUBDOMAIN_INSTALL', false );
 	$base = '/';
-	define( 'DOMAIN_CURRENT_SITE', 'multhx-25047.prodtest-osl.servebolt.cloud' );
+	if ($_SERVER['HTTP_HOST'] == "wordpr-25046.rasktest1.r99.no") {
+		define( 'DOMAIN_CURRENT_SITE', 'multhx-25047.prodtest-osl.servebolt.cloud' );
+	} else {
+		define( 'DOMAIN_CURRENT_SITE', 'multi-prod.snus.party');
+	}
 	define( 'PATH_CURRENT_SITE', '/' );
 	define( 'SITE_ID_CURRENT_SITE', 1 );
 	define( 'BLOG_ID_CURRENT_SITE', 1 );
