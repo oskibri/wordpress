@@ -21,13 +21,13 @@
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'wordpress0be0' );
+define( 'DB_NAME', 'multTY' );
 
 /** Database username */
-define( 'DB_USER', 'wordpress0be0' );
+define( 'DB_USER', 'multTY' );
 
 /** Database password */
-define( 'DB_PASSWORD', 'W1FC<y81)@+Rf:$' );
+define( 'DB_PASSWORD', 'UvIS0LPO2p8hYDQx' );
 
 /** Database hostname */
 define( 'DB_HOST', 'localhost' );
@@ -92,6 +92,17 @@ if ( ! defined( 'WP_DEBUG' ) ) {
 }
 
 define( 'DISABLE_WP_CRON', 'true' );
+
+
+define( 'WP_ALLOW_MULTISITE', true );
+define( 'MULTISITE', true );
+define( 'SUBDOMAIN_INSTALL', false );
+$base = '/';
+define( 'DOMAIN_CURRENT_SITE', 'multhx-25047.prodtest-osl.servebolt.cloud' );
+define( 'PATH_CURRENT_SITE', '/' );
+define( 'SITE_ID_CURRENT_SITE', 1 );
+define( 'BLOG_ID_CURRENT_SITE', 1 );
+
 /* That's all, stop editing! Happy publishing. */
 
 /** Absolute path to the WordPress directory. */
