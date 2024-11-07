@@ -21,7 +21,7 @@
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-if ($_SERVER['HOSTNAME'] == "rasktest1.r99.no") {
+if ($_SERVER['HTTP_HOST'] == "wordpr-25046.rasktest1.r99.no") {
 	define( 'DB_NAME', 'wordpress0be0' );
 	define( 'DB_USER', 'wordpress0be0' );
 	define( 'DB_PASSWORD', 'W1FC<y81)@+Rf:$' );
@@ -92,8 +92,12 @@ if ( ! defined( 'WP_DEBUG' ) ) {
 
 define( 'DISABLE_WP_CRON', 'true' );
 
+define( 'WP_DEBUG', true );
+define( 'WP_DEBUG_LOG', true );
+define( 'WP_DEBUG_DISPLAY', true );
 
-if ($_SERVER['HOSTNAME'] == "rasktest1.r99.no") {
+
+if ($_SERVER['HTTP_HOST'] == "wordpr-25046.rasktest1.r99.no") {
 	define( 'WP_ALLOW_MULTISITE', true );
 	define( 'MULTISITE', true );
 	define( 'SUBDOMAIN_INSTALL', false );
